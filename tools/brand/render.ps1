@@ -7,3 +7,9 @@ function Render($html, $png, $w, $h) {
 }
 Render "og.html" "$pub\og.png" 1200 630
 Render "apple-touch.html" "$pub\apple-touch-icon.png" 180 180
+
+# Profile pictures (1080x1080) go to Pictures\8bin, not into the site.
+$out = Join-Path $env:USERPROFILE "Pictures\8bin"
+New-Item -ItemType Directory -Force $out | Out-Null
+Render "avatar-soft.html" "$out\8bin-avatar-soft.png" 1080 1080
+Render "avatar-gradient.html" "$out\8bin-avatar-gradient.png" 1080 1080
