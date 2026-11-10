@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import { socials } from '../data/socials';
+---
+<Base title="Social" description="Where to find 8bin: GitHub, Discord, Ko-fi and Patreon.">
+  <section class="page-head">
+    <h1>Social</h1>
+    <p>Where to find 8bin online.</p>
+  </section>
+
+  <div class="grid social-grid">
+    {socials.map((s) => (
+      <a class="card" href={s.url} rel="noopener">
+        <h3>{s.name}</h3>
+        <p>{s.description}</p>
+        <span class="handle">{s.handle}</span>
+      </a>
+    ))}
+  </div>
+</Base>
