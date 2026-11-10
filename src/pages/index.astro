@@ -3,27 +3,35 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 
 const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const lead = projects[0];
 ---
 <Base>
   <section class="hero">
     <div>
-      <h1>Things I <span class="grad-text">build</span>.</h1>
-      <p>A collection of my projects: tools, apps and experiments. Placeholder intro, we'll write the real one together.</p>
+      <h1>Desktop software, <span class="grad-text">built by hand</span>.</h1>
+      <p>Two audio mixers, an anime tracker and a printer manager. Mostly Linux, written in Rust, Python and Qt.</p>
       <div class="actions">
         <a class="pill primary" href="#projects">See projects</a>
+        <a class="pill" href="https://github.com/Obscuratea">GitHub</a>
       </div>
     </div>
-    <div class="hero-tile" aria-hidden="true"><span class="grad-text">UI</span></div>
+    {lead?.data.image && (
+      <a class="hero-shot" href={`/projects/${lead.id}/`} aria-label={`${lead.data.title} project`}>
+        <img src={lead.data.image} alt={lead.data.imageAlt} width="1400" height="780" fetchpriority="high" />
+      </a>
+    )}
   </section>
 
   <h2 class="section-title" id="projects">Projects</h2>
   <div class="grid">
-    {projects.map((p, i) => (
+    {projects.map((p) => (
       <a class="card" href={`/projects/${p.id}/`}>
+        {p.data.image && (
+          <div class="shot"><img src={p.data.image} alt={p.data.imageAlt} loading="lazy" /></div>
+        )}
         <h3>{p.data.title}</h3>
         <p>{p.data.summary}</p>
         <div class="tags">{p.data.tags.map((t) => <span class="tag">{t}</span>)}</div>
-        <div class="meter" aria-hidden="true"><i style={`--w:${40 + ((i * 17) % 50)}%`}></i></div>
         <span class="more grad-text">View project →</span>
       </a>
     ))}
