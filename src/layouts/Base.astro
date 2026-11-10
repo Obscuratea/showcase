@@ -2,7 +2,7 @@
 import '../styles/global.css';
 
 interface Props { title?: string; description?: string; image?: string; }
-const siteName = 'Obscuratea';
+const siteName = '8bin';
 const defaultDescription = 'Desktop software: two audio mixers, an anime tracker and a printer manager.';
 const { title, description = defaultDescription, image = '/og.png' } = Astro.props;
 const pageTitle = title ? `${title} · ${siteName}` : `${siteName} · Projects`;
@@ -33,7 +33,18 @@ const path = Astro.url.pathname;
   <body>
     <header class="site-header">
       <div class="wrap">
-        <a class="brand grad-text" href="/">{siteName}</a>
+        <a class="brand" href="/" aria-label={`${siteName} home`}>
+          <svg class="infinity" viewBox="8 16 48 32" aria-hidden="true">
+            <defs>
+              <linearGradient id="brand-g" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#b3a0ff" />
+                <stop offset="1" stop-color="#ff86bd" />
+              </linearGradient>
+            </defs>
+            <path d="M32 32C38 22 51 22 51 32C51 42 38 42 32 32C26 22 13 22 13 32C13 42 26 42 32 32Z" fill="none" stroke="url(#brand-g)" stroke-width="6" stroke-linejoin="round" />
+          </svg>
+          <span class="grad-text">bin</span>
+        </a>
         <nav aria-label="Main">
           <a class="pill" href="/" aria-current={path === '/' ? 'page' : undefined}>Projects</a>
           <a class="pill" href="https://github.com/Obscuratea">GitHub</a>
