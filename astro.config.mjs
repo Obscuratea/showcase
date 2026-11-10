@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// Used for canonical URLs and the social preview image. Update when the custom domain is attached.
+// Used for canonical URLs and the social preview image.
 export default defineConfig({
-  site: 'https://showcase-c6g.pages.dev',
+  site: 'https://projects.8bin.net',
 });
