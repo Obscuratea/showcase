@@ -1,17 +1,17 @@
 ﻿---
-title: Vox Obscurus
+title: Vox
 summary: Audio mixer and router for Linux, built on PipeWire.
 tags: [Rust, QML, PipeWire, Linux]
 order: 1
 repo: https://github.com/Obscuratea/vox-obscurus
-image: /projects/vox-obscurus/default.png
-imageAlt: Vox Obscurus mixer window in the default theme
+image: /projects/vox/default.png
+imageAlt: Vox mixer window in the default theme
 gallery:
-  - { src: /projects/vox-obscurus/default-voice.png, alt: Voice tools on the back of a microphone strip, caption: Voice tools }
-  - { src: /projects/vox-obscurus/default-settings.png, alt: Settings and theme picker, caption: Settings and themes }
-  - { src: /projects/vox-obscurus/background.png, alt: Mixer with a picture as the window background, caption: Picture background }
-  - { src: /projects/vox-obscurus/lavender.png, alt: Lavender theme, caption: Lavender theme }
-  - { src: /projects/vox-obscurus/pureblack.png, alt: Pure Black theme for OLED screens, caption: Pure Black theme }
+  - { src: /projects/vox/default-voice.png, alt: Voice tools on the back of a microphone strip, caption: Voice tools }
+  - { src: /projects/vox/default-settings.png, alt: Settings and theme picker, caption: Settings and themes }
+  - { src: /projects/vox/background.png, alt: Mixer with a picture as the window background, caption: Picture background }
+  - { src: /projects/vox/lavender.png, alt: Lavender theme, caption: Lavender theme }
+  - { src: /projects/vox/pureblack.png, alt: Pure Black theme for OLED screens, caption: Pure Black theme }
 ---
 
 A compact audio mixer and router for Linux, modeled on the essentials of Voicemeeter Banana. The audio engine is written in Rust on PipeWire, and the interface is Qt Quick. Not affiliated with VB-Audio.

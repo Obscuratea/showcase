@@ -1,13 +1,13 @@
 ﻿---
-title: Animus Obscurus
+title: Animus
 summary: Anime and manga tracker that runs on your own computer, with no account.
 tags: [Python, HTML, Self-hosted]
 order: 3
 repo: https://github.com/Obscuratea/animus-obscurus
 link: https://github.com/Obscuratea/animus-obscurus/releases/latest
 linkLabel: Latest release
-image: /projects/animus-obscurus/latest-release.png
-imageAlt: Animus Obscurus manga tracker with list, Discover and Stats views
+image: /projects/animus/latest-release.png
+imageAlt: Animus manga tracker with list, Discover and Stats views
 ---
 
 A personal anime tracker that runs locally. There is no account and no cloud: the list is stored in a spreadsheet next to the app. The server uses only the Python standard library, and the Windows download bundles Python.

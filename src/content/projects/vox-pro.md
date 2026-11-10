@@ -14,7 +14,7 @@ gallery:
   - { src: /projects/vox-pro/settings.png, alt: Settings window, caption: Settings }
 ---
 
-The larger sibling of Vox Obscurus: a PipeWire mixer and router for Linux with eight inputs and eight outputs, aimed at streaming and podcasting. The audio engine is Rust on PipeWire, and the interface is Qt Quick.
+The larger sibling of Vox: a PipeWire mixer and router for Linux with eight inputs and eight outputs, aimed at streaming and podcasting. The audio engine is Rust on PipeWire, and the interface is Qt Quick.
 
 ## Features
 
