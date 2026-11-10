@@ -15,6 +15,18 @@ export const socials: Social[] = [
     handle: 'github.com/Obscuratea',
   },
   {
+    name: 'YouTube',
+    description: 'Video channel.',
+    url: 'https://www.youtube.com/@joshiewoah',
+    handle: 'youtube.com/@joshiewoah',
+  },
+  {
+    name: 'Instagram',
+    description: 'Photo and video profile.',
+    url: 'https://www.instagram.com/joshiewoah/',
+    handle: 'instagram.com/joshiewoah',
+  },
+  {
     name: 'Discord',
     description: 'Community server.',
     url: 'https://discord.gg/uqV26sCQFq',
